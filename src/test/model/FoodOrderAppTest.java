@@ -89,6 +89,33 @@ public class FoodOrderAppTest {
     }
 
 
+    @Test
+    void testFoodItem(){
+        FoodItem foodItem = new FoodItem(3); // 3 stands for Chicken
+        FoodItem foodItem2 = new FoodItem(2); // 2 stands for Pepsi
+        FoodItem foodItem4 = new FoodItem(4); // 4 stands for Beef
+
+        testCustomer.addFood(foodItem);   // Chicken is $6 each
+        testCustomer.addFood(foodItem2);
+        testCustomer.addFood(foodItem4);
+        assertEquals(testCustomer.fdList.foodItemsOrdered.get(0).foodName, "Chicken");
+        assertEquals(testCustomer.fdList.foodItemsOrdered.get(0).price, 6);
+        assertEquals(testCustomer.fdList.foodItemsOrdered.get(0).foodID, 3);
+
+        assertEquals(testCustomer.fdList.foodItemsOrdered.get(1).foodName, "Pepsi");
+        assertEquals(testCustomer.fdList.foodItemsOrdered.get(1).price, 2);
+        assertEquals(testCustomer.fdList.foodItemsOrdered.get(1).foodID, 2);
+
+        assertEquals(testCustomer.fdList.foodItemsOrdered.get(2).foodName, "Beef");
+        assertEquals(testCustomer.fdList.foodItemsOrdered.get(2).price, 8);
+        assertEquals(testCustomer.fdList.foodItemsOrdered.get(2).foodID, 4);
+
+
+
+
+    }
+
+
 
 
 
