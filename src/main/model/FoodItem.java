@@ -7,6 +7,10 @@ public class FoodItem {
     int price;
     String foodName;
 
+    //Effect: based on the assigned foodNumber, the price and the food ID (for identifying type
+    //        of food) can be matched. For example, foodNumber == 1 means Coke which sells
+    //        for $1 dollar each. FoodID will be used for the customer to select/cancel the item
+    //        in the menu displayed.
     public FoodItem(int foodNumber) {
         if (foodNumber == 1) {
             this.foodName = "Coke";
@@ -30,3 +34,4 @@ public class FoodItem {
         }
     }
 }
+

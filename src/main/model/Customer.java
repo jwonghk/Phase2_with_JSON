@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class Customer {
 
-    private static int firstCustomerID = 1; //tracks ID of the customer, kind of like order number
-    private int orderID;               //orderID of the customer
-    private double balance;               //balance of the ordered foods so far
+    protected static int firstCustomerID = 1; //tracks ID of the customer, kind of like order number
+    protected int orderID;               //orderID of the customer
+    protected double balance;               //balance of the ordered foods so far
     //private ArrayList<FoodItem> foodItemsOrdered;       //ordered list of foods so far
-    private String customerName;
-    private FoodItemList fdList;
+    protected String customerName;
+    protected FoodItemList fdList;
 
 
     //EFFECT: customer's name is set to name;
@@ -35,9 +35,9 @@ public class Customer {
         return balance;
     }
 
-    public FoodItemList getFoodItemList() {
-        return fdList;
-    }
+//    public FoodItemList getFoodItemList() {
+//        return fdList;
+//    }
 
 
     //MODIFIES: this
