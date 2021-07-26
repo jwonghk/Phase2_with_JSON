@@ -1,5 +1,6 @@
 package model;
 
+// Each FoodItem has a foodID, the price, and food Name
 public class FoodItem {
 
     int foodID;

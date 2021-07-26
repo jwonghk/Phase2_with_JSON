@@ -6,6 +6,8 @@ import model.FoodItem;
 import java.util.Locale;
 import java.util.Scanner;
 
+
+//Source: Mainly from the Teller application posted on course edx site
 public class FoodOrderApp {
 
     private Customer customer;
@@ -140,7 +142,7 @@ public class FoodOrderApp {
         numbCancel = input.nextInt();
 
         //for (int i = 0; i < numbCancel; i++) {
-            customer.removeFood(itemId, numbCancel);
+        customer.removeFood(itemId, numbCancel);
         //}
 
         printBalanceAndFood();
