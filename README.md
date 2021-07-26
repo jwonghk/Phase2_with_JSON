@@ -1,4 +1,4 @@
-# Project Title: A food order application (MoreHungry)
+# Project Title: A food order application (**MoreHungry**)
 
 ## What will the application do?
 
@@ -28,6 +28,6 @@ might have usage in our daily living.
 - As a user: I want to add item 
 - As a user: I want to be able to cancel items
 - As a user: I want to be able to see the quantities
-  of items ordered and the total price at the momentd
+  of items ordered and the total price at the moment
   
 

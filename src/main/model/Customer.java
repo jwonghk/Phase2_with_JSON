@@ -23,6 +23,23 @@ public class Customer {
     }
 
 
+    public int getId() {
+        return orderID;
+    }
+
+    public String getName() {
+        return customerName;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public FoodItemList getFoodItemList() {
+        return fdList;
+    }
+
+
     //MODIFIES: this
     //EFFECT: add a FoodItem to the customer's list of foods ordered variable FoodItemList
     public void addFood(FoodItem foodItem) {
