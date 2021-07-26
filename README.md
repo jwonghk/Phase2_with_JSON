@@ -23,11 +23,11 @@ might have usage in our daily living.
 
 
 ## *User Stories*
-- I want to see what combo/individual selections
-  are available to choose from and the price of
-  each combo/items.
-- I could add item and remove items as wishes.
-- Know how much I have to pay at the moment.
-- order number
-- approximate wait time
+- As a user: I want to see what selections of food item
+  is available and the price
+- As a user: I want to add item 
+- As a user: I want to be able to cancel items
+- As a user: I want to be able to see the quantities
+  of items ordered and the total price at the momentd
+  
 
