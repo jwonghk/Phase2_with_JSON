@@ -23,9 +23,9 @@ might have usage in our daily living.
 
 
 ## *User Stories*
-- As a user: I want to see what selections of food item
+- As a user: I want to know what selections of food item
   is available and the price when I try to place an order
-- As a user: I want to add item again and again
+- As a user: I want to add item again and again if wanted to
 - As a user: I want to be able to cancel items 
 - As a user: I want to be able to see the quantities
   of items ordered and the total price at the moment

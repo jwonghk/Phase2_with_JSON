@@ -12,9 +12,11 @@ public class Customer {
     protected FoodItemList fdList;
 
 
+    //REQUIRES: Customer's name is non-zero length
     //EFFECT: customer's name is set to name;
     //        orderID of each customer is automatically assigned;
-    //        each custom has a list of food items ordered
+    //        each customer has a list of food items stored
+    //        total cost of the customer's orders is calculated
     public Customer(String name) {
         this.customerName = name;
         this.orderID = firstCustomerID++;   //firstCustomer + 1 ??????? (is it allowed??)
@@ -35,17 +37,14 @@ public class Customer {
         return balance;
     }
 
-//    public FoodItemList getFoodItemList() {
-//        return fdList;
-//    }
-
-
+    //REQUIRES: food to be added has to be of type FoodItem
     //MODIFIES: this
     //EFFECT: add a FoodItem to the customer's list of foods ordered variable FoodItemList
     public void addFood(FoodItem foodItem) {
         this.fdList.addFood(foodItem);
     }
 
+    //REQUIRES: the food id has to be integer, also number of them to be removed also needed to be integer
     //MODIFIES: this
     //EFFECT: remove foodItem from customer's list of foods ordered variable FoodItemList
     //       based on the foodID

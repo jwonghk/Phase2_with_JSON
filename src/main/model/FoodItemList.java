@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class FoodItemList {
     ArrayList<FoodItem> foodItemsOrdered = new ArrayList<FoodItem>();
 
-    //REQUIRE: at least one item in the list
+    //REQUIRE: at least one item in the list, number of items to removed is at least 1
     //MODIFIES: this
     //EFFECT: remove an item from the foodItemsOrdered list based on the foodId
     public void removeFood(int fdID, int numb) {
