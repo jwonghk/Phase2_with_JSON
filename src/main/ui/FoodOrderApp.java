@@ -108,14 +108,14 @@ public class FoodOrderApp {
         FoodItem fd3 = new FoodItem(3);
         FoodItem fd4 = new FoodItem(4);
 
-        System.out.println("How many chickens sandwiches? (Chicken is $3 each)");
+        System.out.println("How many chickens sandwiches? (Chicken is $6 each)");
         chicken = input.nextInt();
         if (chicken > 0) {
             for (int i = 0; i < chicken; i++) {
                 customer.addFood(fd3);
             }
         }
-        System.out.println("How many beef sandwiches? (Beef is $4 each)");
+        System.out.println("How many beef sandwiches? (Beef is $8 each)");
         beef = input.nextInt();
         if (beef > 0) {
             for (int i = 0; i < beef; i++) {

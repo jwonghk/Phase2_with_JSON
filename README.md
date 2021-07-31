@@ -28,6 +28,9 @@ might have usage in our daily living.
 - As a user: I want to add item again and again if wanted to
 - As a user: I want to be able to cancel items 
 - As a user: I want to be able to see the quantities
-  of items ordered and the total price at the moment
+  of items ordered and the total price at the moment   
+- As a user: I want to be able to save my orders history
+- As a user: I also want to be able to reload my order history, so that 
+  next time I could re-order the same types of items if wanted to
   
 
