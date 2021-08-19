@@ -2,6 +2,9 @@ package ui;
 
 import model.Customer;
 import model.FoodItem;
+import model.WorkRoom;
+import persistence.JsonReader;
+import persistence.JsonWriter;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -10,8 +13,16 @@ import java.util.Scanner;
 //Source: Mainly from the Teller application posted on course edx site
 public class FoodOrderApp {
 
-    private Customer customer;
+    private String JSON_STORE = "./data/workroom.json";
     private Scanner input;
+    private WorkRoom workRoom;
+    private JsonWriter jsonWriter;
+    private JsonReader jsonReader;
+    private String customerName;
+    private Customer customer;
+
+
+
 
 
     //EFFECTS: run the Food Order application
@@ -26,7 +37,7 @@ public class FoodOrderApp {
         String command = null;
 
         init();
-
+        input = new Scanner(System.in);
         while (keepGoing) {
             displayMenu();
             command = input.next();
@@ -38,6 +49,7 @@ public class FoodOrderApp {
                 processCommand(command);
             }
         }
+        saveToJSON();
 
         System.out.println("\nPlease visit again!");
     }
@@ -60,8 +72,32 @@ public class FoodOrderApp {
     //MODIFIES: this
     //EFFECTS: initializes Customer
     private void init() {
-        customer = new Customer("Customer");
-        input = new Scanner(System.in);
+//        Scanner nameInput = new Scanner(System.in);
+//        System.out.println("Please enter your name: ");
+//        customerName = nameInput.next();
+//        customerName.toLowerCase();
+//        customer = new Customer(customerName);
+
+        System.out.println("Are you first time here?");
+        System.out.println("Press 1 for yes, and 0 for no");
+        Scanner input = new Scanner(System.in);
+        String yesNo;
+        yesNo = input.next();
+
+        System.out.println("What is your name?");
+        Scanner nameInput = new Scanner(System.in);
+        customerName = nameInput.next();
+        customerName.toLowerCase();
+        customer = new Customer(customerName);
+
+        if (yesNo.equals("1")) {
+            createNewJson();
+        } else {
+            loadOldJson();
+        }
+
+
+
     }
 
     //EFFECTS: display menu of options to user
@@ -113,6 +149,7 @@ public class FoodOrderApp {
         if (chicken > 0) {
             for (int i = 0; i < chicken; i++) {
                 customer.addFood(fd3);
+                customer
             }
         }
         System.out.println("How many beef sandwiches? (Beef is $8 each)");
@@ -148,6 +185,25 @@ public class FoodOrderApp {
         printBalanceAndFood();
 
     }
+
+    //EFFECTS: save ordered history to jSON file
+    public void saveToJSON() {
+
+    }
+
+    //EFFECTS: create new .json file if new user
+    public void createNewJson() {
+        System.out.println("first time");
+        JSON_STORE = "./data/" + customerName + "workroom.json";
+
+    }
+
+    //EFFECTS: load old .json file
+    public void loadOldJson() {
+        System.out.println("have been here");
+        JSON_STORE = "./data/" + customerName + "workroom.json";
+    }
+
 
     //Effects: prints current balance and food ordered
     private void printBalanceAndFood() {
